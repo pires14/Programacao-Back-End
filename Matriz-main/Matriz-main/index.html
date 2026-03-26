@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labirinto</title>
+</head>
+<body>
+    <canvas> width="640" height="640"</canvas>
+
+    <script>
+        let cnv = document.querySelector("canvas");
+
+        let ctx = cnv.getContext("2d");
+        //context = contexto, ou seja, uma folha de papel (2d)
+        let bloco = 32;
+
+        let matriz = [
+            [1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1],
+            [1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1]
+        ]
+        //clear rect limpa o espaço de desenho, recebendo os valores de x,y, largura e altura
+        function render(){
+            ctx.clearRect(0,0,cnv.width, cnv.height);
+            for(let linha=0; linha < matriz.length; linha++){
+                for(let coluna=0; coluna < matriz[linha].length; coluna++){
+                    let caminho = matriz[linha][coluna];
+                    if(caminho === 1){
+                        ctx.fillStyle = "#000";
+                        let x = coluna * bloco;
+                        let y = linha * bloco;
+                        ctx.fillRect(x,y,bloco,bloco);
+                        //fillStyle = estilo de preenchimento
+                    }
+                }
+            }
+        }
+
+        
+    </script>
+</body>
+</html>
