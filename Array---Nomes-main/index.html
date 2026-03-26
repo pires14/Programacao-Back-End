@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreio</title>
+</head>
+<body>
+    <h2>Cadastro de nomes</h2>
+    <input type="text" id="nome" placeholder="Digite um nome">
+    <button onclick="adicionar()">Cadastrar</button>
+    <button onclick="mostrar()">Mostrar lista</button>
+    <p id="resultado"></p>
+    <script>
+        let nomes = [];
+        function adicionar(){
+            let nome = document.getElementById('nome').value;
+            if(nome != ""){
+                if(nomes.includes(nome)){
+                    alert("Este nome já foi cadastrado! Por favor, digite outro nome!");
+                } else {
+                    nomes.push(nome);
+                    document.getElementById('nome').value = "";
+                }
+            } else {
+                alert("POR FAVOR, ADICIONE UM NOME!!");
+            }
+        }
+
+        function mostrar(){
+            let texto = "Nomes cadastrados: <br>";
+            for(let i = 0; i < nomes.length; i++){
+                texto += nomes[i] + "<br>";
+            }
+            document.getElementById('resultado').innerHTML = texto;
+        } 
+        function apagar(){document.getElementById('resultado').addEventListener("dblclick", function(event) {
+            event.target.classList.add("fadeOut");
+            setTimeout(() => {
+                document.getElementById('resultado').innerHTML = "";
+            }, 1000);
+        });}
+        
+    </script>
+</body>
+</html>
