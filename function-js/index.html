@@ -21,20 +21,26 @@
         background: red;
         position: absolute;
         left: 0px;
-        right: 0px;
-        top: 0px; /* Pode movimentar-se no campo/tela inteiro. */
+        top: 0px;
+         /* Pode movimentar-se no campo/tela inteiro. */
     }
 </style>
 <script>
 let caixa = document.getElementById('caixa');
-let posicao = 0;
-
+let x = 0;
+let y = 0;  //y e, programação aumenta para baixo.
+let direcao = "direita";
 setInterval(()=>{
-    posicao += 5;
-    caixa.style.left = posicao + "px";
-    caixa.style.top = posicao + "px";
-    caixa.style.right = posicao - "px"; //posicao = posicao + 5
-},100);
+    switch(direcao){
+        case "direita": x+=5; if(x>1865) direcao = "baixo"; break
+        case "baixo": y+=5; if(y>895) direcao = "esquerda"; break
+        case "esquerda": x-=5; if(x<0) direcao = "cima"; break
+        case "cima": y-=5; if(y<0) direcao = "direita"; break
+    }
+    caixa.style.left = x + "px";
+    caixa.style.top = y + "px";
+    //posicao = posicao + 5
+},1);
 
 
 
