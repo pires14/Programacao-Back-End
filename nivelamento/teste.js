@@ -104,3 +104,38 @@ for(let i = 0; i <10; i++ ){
     console.log(i);
 }
 
+// 20. Crie uma função que exibe uma mensagem.
+function exibe(){
+    console.log("Hello, guys");
+}
+exibe();
+
+// 21. Crie uma função que multiplica dois números.
+function multiplica(a,b){
+    return a*b;
+}
+console.log(multiplica(54,63));
+
+// 22. Crie uma função que verifica se é par ou ímpar
+function verificar(num){
+    return num % 2 === 0 ? "par" : "impar"; //ternário
+} 
+console.log(verificar(2));
+
+// 23. Crie uma função que retorne o dobro
+function dobro(a){
+    return a * 2;
+}
+console.log(dobro(2));
+
+// 24. Crie uma função que some elementos de um array
+
+function soma(arr){
+    total = 0;
+    for(let i = 0; arr.length; i++){
+        total += arr[i];        
+    }
+    return total;
+}
+console.log(soma([1,2,3]));
+
