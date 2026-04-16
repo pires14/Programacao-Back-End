@@ -244,3 +244,108 @@ console.log(multiplica);
 // 35: Exiba um por um os elementos do array ["azul", "verde", "amarelo"]
 
 // 36: Exiba o último elemento do array [100, 200, 300, 400, 500]
+
+/*Colégio Antonio de Moraes Barros
+Professor; Edson F Alves
+Curso técnico:
+10 EXERCÍCIOS COM OPERADOR TERNÁRIO
+Instrução: Resolva usando operador ternário (? :)
+============================================*/
+
+/*EXERCÍCIO 1 (Fácil)
+Verifique se um número é positivo ou não.*/
+let numero = 10;
+let resultado = numero > 0 ? "Positivo": "Negativo";
+console.log(`O número ${numero} é: ${resultado}`);
+/*EXERCÍCIO 2 (Fácil)
+Verifique se uma pessoa pode votar.
+- Se sim, retorne "Pode votar"- Se não, "Não pode votar"*/
+let idade_voto = 16;
+let resultado_voto = idade_voto >= 16 ? "Pode votar" : "Não pode votar";
+console.log(`Com ${idade_voto} anos: ${resultado_voto}`);
+
+/*EXERCÍCIO 3 (Fácil)
+Descubra se um número é par ou ímpar.
+- Se par, retorne "Par"- Se ímpar, retorne "Ímpar"*/
+let num_par = 2;
+let resultado_par = num_par % 2 === 0 ? "O número é par" : "O número é ímpar";
+console.log(`O número ${num_par} é: ${resultado_par}.`);
+/*EXERCÍCIO 4 (Fácil)
+Crie uma verificação de nível de acesso.
+- Se nível for "admin", retorne "Acesso total"
+- Caso contrário, "Acesso restrito"*/
+let verifica_nivel = "admin";
+let retorno_nivel = verifica_nivel === "admin" ? "Acesso Total" : "Acesso restrito"
+console.log(retorno_nivel);
+
+/*EXERCÍCIO 5 (Médio-Fácil)
+Aplique desconto em um produto.
+- Se preço > 100, aplique 10% de desconto (multiplicar por 0.9)
+- Caso contrário, mantenha o preço original*/
+
+let preco = 110;
+let desconto = preco > 100 ? preco * 0.9 : preco;
+console.log(`O produto de ${preco} reais teve desconto e agora o seu preço atual é: ${desconto}.`);
+
+/*EXERCÍCIO 6 (Médio-Fácil)
+Classifique a situação do aluno baseado na média.
+- Se nota >= 7, retorne "Aprovado"
+- Caso contrário, "Reprovado"*/
+let media = 8;
+let situacao = media >= 7? "aprovado" : "reprovado";
+console.log(`A média do aluno é ${media} e ele está ${situacao}.`);
+
+/*EXERCÍCIO 7 (Médio)
+Verifique se um número é par E maior que 10.
+- Se sim, retorne "Atende critérios"
+- Se não, "Não atende"*/
+
+let numero_par_medio = 12;
+let resultado_numero_medio = numero_par_medio % 2 ===0 && numero_par_medio > 10 ? "atende critérios" : "não atende";
+console.log(`O número ${numero_par_medio} ${resultado_numero_medio}.`);
+
+/*EXERCÍCIO 8 (Médio)
+Classifique o número em positivo, negativo ou zero.
+- Se > 0: "Positivo"
+- Se < 0: "Negativo"
+- Se = 0: "Zero"*/
+
+let numero_8 = 0;
+let classifique_numero = numero_8 > 0 ? "positivo" : numero_8 < 0 ? "negativo" : "zero";
+console.log(`O número ${numero_8} é: ${classifique_numero}`);
+
+/*EXERCÍCIO 9 (Médio)
+Simule um login simples.
+- Se usuario for "admin" E senha for "123", retorne "Login OK"
+- Caso contrário, "Falha no login"*/
+let usuario = "admin";
+let senha = 123;
+let login = usuario === "admin" && senha === 123 ? "Login OK" : "Falha no login";
+console.log(`O usuário ${usuario} e sua senha é ${senha} tem: ${login}.`);
+
+/*EXERCÍCIO 10 (Médio)
+Classifique a pessoa por idade:
+- Menor que 12: "Criança"
+- Entre 12 e 17: "Adolescente"
+- Entre 18 e 59: "Adulto"
+- 60 ou mais: "Idoso"*/
+let idade_10 = 60;
+let classifique_idade = idade_10 < 12 ? "criança" : idade_10 <=17 ? "adolescente" : idade_10 <= 59 ? "adulto" : "idoso";
+console.log(`A pessoa tem ${idade_10} anos, então ela é ${classifique_idade}`);
+//Com if;
+let idadePessoa = 12;
+function ClassifiqueIdade(){
+    if (idadePessoa < 12 ){
+        return "criança";
+    }
+    else if(idadePessoa <=17){
+        return "adolescente";
+    }
+    else if(idadePessoa <=59){
+        return "adulto";
+    }
+    else{
+        return "idoso";
+    }
+}
+console.log(`A pessoa tem ${idadePessoa} anos, então ela é ${ClassifiqueIdade(idadePessoa)}`);
