@@ -349,3 +349,69 @@ function ClassifiqueIdade(){
     }
 }
 console.log(`A pessoa tem ${idadePessoa} anos, então ela é ${ClassifiqueIdade(idadePessoa)}`);
+
+// 51: Crie um objeto pessoa com nome "Ana" e idade 25
+let pessoa = {
+    nome : "Ana",
+    idade: 25
+};
+
+// 52: Acesse e exiba o nome do objeto {nome: "Carlos", cidade: "São Paulo"}
+let pessoa2 = {
+    nome: "Carlos",
+    cidade: "São Paulo"
+};
+console.log(`O nome da pessoa é ${pessoa2.nome} e mora em ${pessoa2.cidade}.`);
+
+// 53: Adicione a propriedade "curso" ao objeto {nome: "Maria", idade: 20}
+let pessoa3 = {
+    nome: "Maria",
+    idade: 20
+};
+console.log("Antes:" , pessoa3);
+pessoa3.curso = "ADM";
+console.log("Depois:" , pessoa3);
+
+// 54: Altere a idade do objeto {nome: "João", idade: 18} para 19
+let pessoa4 = {
+    nome: "João",
+    idade: 18
+}
+pessoa4.idade = 19;
+console.log(pessoa4);
+// 55: Remova a propriedade "telefone" do objeto {nome: "Pedro", telefone: "99999-9999"}
+let pessoa5 = {
+    nome: "Pedro",
+    telefone: 99999-9999
+}
+delete pessoa5.telefone;
+console.log(pessoa5);
+// 56: Exiba todas as propriedades do objeto {marca: "Nike", tamanho: 42, cor: "preto"}
+let tenis = {
+    marca: "Nike",
+    tamanho: 42,
+    cor: "preto"
+}
+console.log(tenis);
+// 57: Crie um objeto cachorro com nome "Rex" e um método latir que exibe "Au au!"
+function latir(){
+    let cachorro = {
+        nome: "Rex"
+    }    
+    console.log("Au au!");
+}
+console.log(latir());
+
+// 58: Crie um objeto aluno com nome "Lucas" e notas [8, 7, 9]
+let aluno = {
+    nome: "Lucas",
+    notas: [8,7,9]
+}
+// 59: Crie um objeto carro com marca "Fiat" e um objeto motor com potencia "1.0"
+let carro = {
+    marca: "Fiat",    
+let motor = {
+    potencia: 1.0
+}
+}
+// 60: Crie um array com 3 objetos de produtos (nome e preço) e exiba todos
