@@ -232,20 +232,27 @@ for (let i = 0; i < array_num.length; i++){
 console.log(soma_num);
 
 // 33: Multiplique cada elemento do array [1, 2, 3, 4] por 2
-let multiplica = 1;
 let array_mult = [1,2,3,4];
-for(let i = 0; i < array_mult.length; i++){
-    multiplica = multiplica * array_mult[i];
-}
-console.log(multiplica);
+let multiplica_lista = [];
+for(let i = 0; i< array_mult.length; i++)
+    multiplica_lista.push(array_mult[i] * 2);
+console.log(multiplica_lista);
 
 // 34: Verifique se a fruta "laranja" existe no array ["maçã", "banana", "uva"]
-
+let array_frutas = ["maçã","banana", "uva"]
+for(let i = 0; i < array_frutas; i++){
+    if("laranja" in array_frutas[i]){
+        console.log("Laranja está.")
+    }
+    else{
+        console.log("Laranja não está.")
+    }
+}
 // 35: Exiba um por um os elementos do array ["azul", "verde", "amarelo"]
 
 // 36: Exiba o último elemento do array [100, 200, 300, 400, 500]
 
-/*Colégio Antonio de Moraes Barros
+/*Colégio Estadual Antonio de Moraes Barros
 Professor; Edson F Alves
 Curso técnico:
 10 EXERCÍCIOS COM OPERADOR TERNÁRIO
@@ -408,10 +415,5 @@ let aluno = {
     notas: [8,7,9]
 }
 // 59: Crie um objeto carro com marca "Fiat" e um objeto motor com potencia "1.0"
-let carro = {
-    marca: "Fiat",    
-let motor = {
-    potencia: 1.0
-}
-}
+
 // 60: Crie um array com 3 objetos de produtos (nome e preço) e exiba todos
