@@ -240,17 +240,93 @@ console.log(multiplica_lista);
 
 // 34: Verifique se a fruta "laranja" existe no array ["maçã", "banana", "uva"]
 let array_frutas = ["maçã","banana", "uva"]
-for(let i = 0; i < array_frutas; i++){
-    if("laranja" in array_frutas[i]){
-        console.log("Laranja está.")
+let procura = "laranja";
+let existe = false;
+for(let i = 0; i < array_frutas.length; i++){
+    if(array_frutas[i] == procura){ 
+        existe = true;
     }
-    else{
-        console.log("Laranja não está.")
-    }
+}if(existe){ //Só executa se for verdadeiro
+    console.log(`${procura} foi encontrada.`)
+}else{
+    console.log(`${procura} não foi encontrada.`)
 }
 // 35: Exiba um por um os elementos do array ["azul", "verde", "amarelo"]
-
+let cores = ["azul", "verde", "amarelo"]
+for(let i = 0; i < cores.length; i++){
+    console.log(cores[i]);
+}
 // 36: Exiba o último elemento do array [100, 200, 300, 400, 500]
+let numeros1 = [100,200,300,400,500]
+console.log(numeros1[4])
+// ou:
+let numeros2 = [100,200,300,400,500];
+let ultimoIndice = numeros2.length -1;
+console.log(`O último elemento é: ${numeros2[ultimoIndice]}`);
+
+// ==================== ATIVIDADES COM MATRIZ ====================
+
+// 41: Crie uma matriz 2x2 com os números 1, 2 na primeira linha e 3, 4 na segunda
+let matriz = 
+[[1,2],[3,4]];
+console.log(matriz);
+// 42: Exiba o elemento da linha 1, coluna 2 da matriz [[5, 6], [7, 8]]
+let matriz2 = [[5,6],[7,8]];
+console.log(matriz2[0][1]);
+// 43: Exiba todos os elementos da matriz [[1, 2, 3], [4, 5, 6]]
+let matriz3 = [[1,2,3],[4,5,6]];
+for(let i = 0; i < matriz3.length; i++){
+    for(let j = 0; j < matriz3[i].length; j++){
+        console.log(`Elementos [i],[j] = ${matriz3[i][j]}`);
+    }
+}
+console.log(matriz3);
+// 44: Some todos os números da matriz [[2, 4], [6, 8]]
+let matriz4 = [[2,4], [6,8]];
+let somaMatriz = 0;
+for(let i = 0; i < matriz4.length; i++){
+    for(let j = 0; j < matriz4[i].length; j++){
+        somaMatriz = somaMatriz + matriz4[i][j];
+    }
+}
+console.log(`A soma de todos os números da matriz é: ${somaMatriz}`);
+// 45: Crie uma matriz 3x3 com números de 1 a 9
+let matriz3X3 = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]];
+for(let i = 0; i < matriz3X3.length; i++){
+    console.log(matriz3X3[i]);
+}
+
+// 46: Exiba os elementos da diagonal principal da matriz [[1,2,3],[4,5,6],[7,8,9]]
+let matrizDiagonal = [
+    [1,2,3],
+    [4,5,6],
+    [7,8,9]
+];
+for(let i = 0; i < matrizDiagonal.length; i++){
+    console.log(matrizDiagonal[i][i]);
+}
+// 47: Altere o elemento da linha 0, coluna 1 da matriz [[1,2],[3,4]] para 10
+let matriz7 = [[1,2],[3,4]];
+matriz7[0][1] = 10;
+console.log(matriz7);
+// 48: Exiba apenas a primeira linha da matriz [[10,20],[30,40],[50,60]]
+let matriz8 = [[10,20],[30,40],[50,60]];
+console.log(matriz8[0]);
+// 49: Exiba apenas os elementos da primeira coluna da matriz [[1,2],[3,4],[5,6]]
+let matriz9 = [[1,2],[3,4],[5,6]];
+console.log(` Linha 1, coluna 1 :${matriz9[0][1]}\n Linha 2, coluna 1: ${matriz9[1][1]}\n Linha 3, coluna 1: ${matriz9[2][1]}`);
+
+// 50: Multiplique todos os elementos da matriz [[1,2],[3,4]] por 2
+let matriz10 = [[2,4], [6,8]];
+
+for(let i = 0; i < matriz10.length; i++){
+    for(let j = 0; j < matriz10[i].length; j++){
+        matriz10 = matriz[i][j] * 2;
+    }
+}
 
 /*Colégio Estadual Antonio de Moraes Barros
 Professor; Edson F Alves
@@ -339,7 +415,7 @@ Classifique a pessoa por idade:
 let idade_10 = 60;
 let classifique_idade = idade_10 < 12 ? "criança" : idade_10 <=17 ? "adolescente" : idade_10 <= 59 ? "adulto" : "idoso";
 console.log(`A pessoa tem ${idade_10} anos, então ela é ${classifique_idade}`);
-//Com if;
+//Com if:
 let idadePessoa = 12;
 function ClassifiqueIdade(){
     if (idadePessoa < 12 ){
@@ -356,6 +432,8 @@ function ClassifiqueIdade(){
     }
 }
 console.log(`A pessoa tem ${idadePessoa} anos, então ela é ${ClassifiqueIdade(idadePessoa)}`);
+
+// ==================== ATIVIDADES COM OBJETOS ====================
 
 // 51: Crie um objeto pessoa com nome "Ana" e idade 25
 let pessoa = {
