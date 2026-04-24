@@ -310,23 +310,30 @@ for(let i = 0; i < matrizDiagonal.length; i++){
 }
 // 47: Altere o elemento da linha 0, coluna 1 da matriz [[1,2],[3,4]] para 10
 let matriz7 = [[1,2],[3,4]];
+console.log(`Antes: ${matriz7}`);
 matriz7[0][1] = 10;
-console.log(matriz7);
+console.log(`Depois: ${matriz7}`);
 // 48: Exiba apenas a primeira linha da matriz [[10,20],[30,40],[50,60]]
 let matriz8 = [[10,20],[30,40],[50,60]];
-console.log(matriz8[0]);
+console.log(`Primeira linha: ${matriz8[0]}`);
 // 49: Exiba apenas os elementos da primeira coluna da matriz [[1,2],[3,4],[5,6]]
 let matriz9 = [[1,2],[3,4],[5,6]];
-console.log(` Linha 1, coluna 1 :${matriz9[0][1]}\n Linha 2, coluna 1: ${matriz9[1][1]}\n Linha 3, coluna 1: ${matriz9[2][1]}`);
-
+console.log(`Primeira coluna`);
+for(let i = 0; i < matriz9.length; i++){
+    console.log(matriz9[i][0]);
+}
 // 50: Multiplique todos os elementos da matriz [[1,2],[3,4]] por 2
-let matriz10 = [[2,4], [6,8]];
-
+let matriz10 = [[1,2], [3,4]];
+let matrizMulti = [];
 for(let i = 0; i < matriz10.length; i++){
+    matrizMulti[i] = [];
     for(let j = 0; j < matriz10[i].length; j++){
-        matriz10 = matriz[i][j] * 2;
+        matrizMulti[i][j] = matriz10[i][j] * 2;
     }
 }
+console.log(`Original: ${matriz10}`);
+console.log(`Multiplicado: ${matrizMulti}`);
+
 
 /*Colégio Estadual Antonio de Moraes Barros
 Professor; Edson F Alves
