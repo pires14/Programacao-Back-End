@@ -484,15 +484,18 @@ let tenis = {
     tamanho: 42,
     cor: "preto"
 }
+for(let prop in tenis){
+    console.log(`${prop}: ${tenis[prop]}`);
+}
 console.log(tenis);
 // 57: Crie um objeto cachorro com nome "Rex" e um método latir que exibe "Au au!"
-function latir(){
-    let cachorro = {
-        nome: "Rex"
-    }    
-    console.log("Au au!");
+let cachorro = {
+    nome: "Rex",
+    latir: function(){
+        console.log("Au au");
+    }
 }
-console.log(latir());
+cachorro.latir();
 
 // 58: Crie um objeto aluno com nome "Lucas" e notas [8, 7, 9]
 let aluno = {
@@ -500,5 +503,10 @@ let aluno = {
     notas: [8,7,9]
 }
 // 59: Crie um objeto carro com marca "Fiat" e um objeto motor com potencia "1.0"
-
+let carro = {
+    marca: "Fiat"
+}
+let motor = {
+    potencia: 1.0
+}
 // 60: Crie um array com 3 objetos de produtos (nome e preço) e exiba todos
