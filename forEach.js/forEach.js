@@ -18,3 +18,27 @@ console.log("for Each arrow (modo seta):");
 numeros.forEach(n => console.log(n));
 }
 // O forEach percorre o arreio, o que foi percorrido vira o n.
+
+//Mostre todos os valores no terminal:
+//dados do array
+//let frutas["Maçã","Banana","Uva","Abacate"]
+//utilizar forEach função anônima e função arrow.
+
+console.log("Usando forEach função anônima: ")
+let frutas = ["Maçã","Banana","Uva","Abacate"];
+frutas.forEach(function(n){
+    console.log(n);
+})
+console.log("\nUsando função arrow: ")
+frutas.forEach(n => console.log(n));
+
+// Some todos os valores e mostre o resultado
+//preços 10,30,50,60
+let precos = [10,30,50,60];
+let soma = 0;
+precos.forEach(function(a){
+    soma += a;
+})
+console.log(`A soma dos preços é: ${soma}`);
+let c = 0;
+precos.forEach(b => console.log(c+= b));
