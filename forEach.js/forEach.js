@@ -34,11 +34,31 @@ frutas.forEach(n => console.log(n));
 
 // Some todos os valores e mostre o resultado
 //preços 10,30,50,60
+console.log("Usando arrow function para somar:")
 let precos = [10,30,50,60];
 let soma = 0;
-precos.forEach(function(a){
-    soma += a;
-})
-console.log(`A soma dos preços é: ${soma}`);
-let c = 0;
-precos.forEach(b => console.log(c+= b));
+precos.forEach(b => soma += b);
+console.log(`A soma é: ${soma}.\n`)
+console.log("Usando for para somar:")
+
+let precosFor = [10,30,50,60];
+let somaFor = 0;
+for(let i=0; i < precosFor.length;i++){
+    somaFor+= precosFor[i];
+}
+console.log(`A soma é: ${somaFor}.\n`);
+
+console.log(`Exercício de pares:\n`)
+
+let numeros = [1,2,3,4,5,6,7,8];
+console.log(`Usando for:`)
+for(let i = 0; i < numeros.length; i++){
+    if(numeros[i]%2 ===0) console.log(numeros[i]);
+}
+
+
+console.log(`Usando arrow function:`);
+let numerosPar = [1,2,3,4,5,6,7,8];
+numerosPar.forEach(n => {
+    if(n%2 ===0) console.log(n)
+});
